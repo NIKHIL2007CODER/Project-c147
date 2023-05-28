@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+        <title>
+            3D ROOM
+        </title>
+    </head>
+    <body>
+        <a-scene>
+            <a-sky color = "blue"></a-sky>
+            <a-assests>
+                <a-asset-item id = "bed" src = "./bed_agape/scene.gltf"></a-asset-item>
+                <a-asset-item id = "lamp" src = "./lamp/scene.gltf"></a-asset-item>
+                <a-asset-item id = "chair" src = "./rustic_chair/scene.gltf"></a-asset-item>
+                <a-asset-item id = "table" src = "./industrial_table/scene.gltf"></a-asset-item>
+            </a-assests>
+
+            <a-entity>
+                <a-entity gltf-model = "#bed" position = "2.5 0 -2.5" scale = "0.02 0.02 0.02"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity gltf-model = "#lamp" position = "-1 4 -4" scale = "0.02 0.02 0.02"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity gltf-model = "#chair" position = "-2.5 1 -5.5" scale="2 2 2" rotation = "0 -200 0"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity gltf-model = "#table" position = "-3 0 -4" scale = "2 2 2"></a-entity>
+            </a-entity>
+
+            <a-plane position = "0 0 0" src = "./floor.jpg" rotation = "-90 0 0" width = "10" height = "10"></a-plane>
+            <a-plane position = "0 10 0" src = "./wall1.png" rotation = "90 0 0" width = "10" height = "10"></a-plane>
+            <a-plane position = "5 5 0" src = "./wall1.png" rotation = "0 -90 0" width = "10" height = "10"></a-plane>
+            <a-plane position = "0 5 -5" src = "./wall1.png" rotation = "0 0 0" width = "10" height = "10"></a-plane>
+        </a-scene>
+    </body>
+</html>
